@@ -4,13 +4,13 @@
     {
         public Fizz_BuzzReplacer()
         {
-            AddStrategy();
+            AddStrategyFizzBuzz();
         }
 
-        private protected void AddStrategy()
+        private protected void AddStrategyFizzBuzz()
         {
-            strategyList.Add(new Strategy("fizz", 3));
-            strategyList.Add(new Strategy("buzz", 5));
+            AddStrategy("fizz", 3);
+            AddStrategy("buzz", 5);
         }
 
     }

@@ -32,5 +32,9 @@
             return result;
         }
 
+        public void AddStrategy(string text, int divider)
+        {
+            strategyList.Add(new Strategy(text, divider));
+        }
     }
 }
