@@ -21,6 +21,5 @@ namespace MuzzGuzz
             AddStrategy("guzz", 7);
         }
 
-
     }
 }

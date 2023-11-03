@@ -19,7 +19,7 @@
             return replaced == true ? result.Substring(0, result.Length - 1) : num.ToString();
         }
 
-        public string ReplaceString(List<int> numbers)
+        public virtual string ReplaceString(List<int> numbers)
         {
             if (numbers != null) {
                 string result = string.Empty;

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GoodBoy\GoodBoy.csproj" />
     <ProjectReference Include="..\MuzzGuzz\MuzzGuzz.csproj" />
     <ProjectReference Include="..\TestTaskFlexibase\FizzBuzz.csproj" />
   </ItemGroup>

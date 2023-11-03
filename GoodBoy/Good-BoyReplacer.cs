@@ -8,8 +8,26 @@ using MuzzGuzz;
 
 namespace GoodBoy
 {
-    internal class Good_BoyReplacer:Fizz_BuzzReplacer
+    public class Good_BoyReplacer:Muzz_GuzzReplacer
     {
+        public Good_BoyReplacer():base() {}
+
+        public override string ReplaceString(List<int> numbers)
+        {
+            string originalString = base.ReplaceString(numbers);
+            string[] oldWords = new string[] { "fizz-buzz", "fizz", "buzz" };
+            string[] newWords = new string[] { "good-boy", "dog", "cat" };
+            for (int i = 0; i < oldWords.Length; i++)
+            {
+                while (originalString.Contains(oldWords[i]))
+                {
+                    originalString = originalString.Replace(oldWords[i], newWords[i]);
+                }
+            }
+
+            return originalString;
+
+        }
 
     }
 }
