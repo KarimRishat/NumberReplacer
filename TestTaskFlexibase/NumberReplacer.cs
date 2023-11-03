@@ -21,15 +21,17 @@
 
         public string ReplaceString(List<int> numbers)
         {
-            if (numbers == null) throw new ArgumentNullException("numbers");
-            string result = string.Empty;
-            result = String.Concat(OutputString(numbers[0]));
-            for (int i = 1; i < numbers.Count(); i++)
-            {
-                result = String.Concat(result, ", ");
-                result = String.Concat(result, OutputString(numbers[i]));
+            if (numbers != null) {
+                string result = string.Empty;
+                result = String.Concat(OutputString(numbers[0]));
+                for (int i = 1; i < numbers.Count(); i++)
+                {
+                    result = String.Concat(result, ", ");
+                    result = String.Concat(result, OutputString(numbers[i]));
+                }
+                return result;
             }
-            return result;
+            else { return string.Empty; }
         }
 
         public void AddStrategy(string text, int divider)

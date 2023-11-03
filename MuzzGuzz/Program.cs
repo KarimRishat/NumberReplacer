@@ -15,7 +15,7 @@ namespace MuzzGuzz
                 List<int> nums = input.Split(',').Select(x => int.Parse(x)).ToList();
                 return nums;
             }
-            else throw new ArgumentNullException(nameof(input));
+            else return null;
         }
 
         static void Main(string[] args)

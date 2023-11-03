@@ -1,4 +1,12 @@
-namespace TestTaskFlexibase
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TestTaskFlexibase;
+
+
+namespace FizzBuzz
 {
     
     [TestClass]
@@ -18,13 +26,15 @@ namespace TestTaskFlexibase
         [TestMethod]
         public void NumbersIsNull()
         {
-            var numberReplacer = new Fizz_BuzzReplacer();
-            Assert.ThrowsException<ArgumentNullException>(() => numberReplacer.ReplaceString(null));
+            string expected = String.Empty;
+            NumberReplacer replacer = new Fizz_BuzzReplacer();
+            string result = replacer.ReplaceString(null);
+            Assert.AreEqual(expected, result);
         }
 
 
         [TestMethod]
-        public void ReturnFizz_WhenNumberIsDivisibleBy3()
+        public void NumberIsDivisibleBy3()
         {
             NumberReplacer numberReplacer = new Fizz_BuzzReplacer();
             List<int> input = new List<int> { 3, 6, 9, 12 };
@@ -35,7 +45,7 @@ namespace TestTaskFlexibase
 
 
         [TestMethod]
-        public void ReturnBuzz_WhenNumberIsDivisibleBy5()
+        public void NumberIsDivisibleBy5()
         {
             NumberReplacer numberReplacer = new Fizz_BuzzReplacer();
             List<int> input = new List<int> { 5, 10, 20, 25 };
@@ -46,7 +56,7 @@ namespace TestTaskFlexibase
 
 
         [TestMethod]
-        public void ReplaceNumbers_ShouldReturnFizzBuzz_WhenNumberIsDivisibleBy3And5()
+        public void NumberIsDivisibleBy3And5()
         {
             NumberReplacer numberReplacer = new Fizz_BuzzReplacer();
             List<int> input = new List<int> { 15, 30, 45, 60 };
@@ -56,7 +66,7 @@ namespace TestTaskFlexibase
         }
 
         [TestMethod]
-        public void ReplaceNumbers_ShouldReturnNumber_WhenNumberIsNotDivisibleBy3Or5()
+        public void NumberIsNotDivisibleBy3Or5()
         {
             NumberReplacer numberReplacer = new Fizz_BuzzReplacer();
             List<int> input = new List<int> { 1, 2, 4, 7, 8, 11, 13, 14 };

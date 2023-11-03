@@ -6,12 +6,13 @@
         {
 
             string input = Console.ReadLine();
-            if(!input.Equals(String.Empty))
+            if (!input.Equals(String.Empty))
             {
                 input = input.Trim();
                 List<int> nums = input.Split(',').Select(x => int.Parse(x)).ToList();
                 return nums;
-            }else throw new ArgumentNullException(nameof(input));
+            }
+            else return null;
         }
         static void Main(string[] args)
         {
